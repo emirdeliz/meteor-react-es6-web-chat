@@ -7,7 +7,7 @@ import NotFound from '../not-found/index.jsx';
 
 export const renderRoutes = (
     <Router history={ browserHistory }>
-        <Route path="login" component={ Login }/>
+        <Route path="/login" component={ Login }/>
         <Route path="/" component={ Home }/>
         <Route path="*" component={ NotFound }/>
     </Router>

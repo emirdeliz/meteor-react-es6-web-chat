@@ -9,20 +9,22 @@ class Home extends Component {
     constructor(props) {
         super(props);
 
-        const { name, picture, email } = JSON.parse(localStorage.getItem('auth'));
-
         this.state = {
-            name,
-            picture,
-            email
+            name: '',
+            picture: '',
+            email: ''
         };
     }
 
     componentWillMount() {
-        const logged = localStorage.getItem('auth');
+        const auth = localStorage.getItem('auth');
+        const logged = (auth && auth !== 'null' && JSON.parse(auth).name);
+
         if (!logged) {
             this.context.router.push('login');
         } else {
+            const { name, picture, email } = JSON.parse(auth).name;
+            this.setState({ name, picture, email });
             this.buildLastMessages();
         }
     }
@@ -33,7 +35,6 @@ class Home extends Component {
 
     componentDidUpdate() {
         this.positionScrollBottom();
-        this.buildLastMessages();
     }
 
     positionScrollBottom() {
@@ -47,7 +48,7 @@ class Home extends Component {
     }
 
     logout() {
-        localStorage.clear();
+        localStorage.setItem('auth', null);
         this.context.router.push('login');
     }
 
