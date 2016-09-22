@@ -1,18 +1,8 @@
 sudo: required
 language: node_js
 node_js:
-  - "0.10"
-
-before_install:
-  - "curl -L http://git.io/ejPSng | /bin/sh"
-
-env:
-  - CXX=g++-4.8
-addons:
-  apt:
-    sources:
-      - ubuntu-toolchain-r-test
-    packages:
-      - g++-4.8
-
-script: npm run test
+    - "node"
+install:
+    - "curl https://install.meteor.com | /bin/sh"
+script:
+    - "meteor test --once --driver-package practicalmeteor:mocha"
