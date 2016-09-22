@@ -6,5 +6,7 @@ install:
     - "curl https://install.meteor.com | /bin/sh"
 before_script:
     - meteor npm update
+    - meteor npm install --save react react-addons-pure-render-mixin
+    - meteor add react-meteor-data
 script:
     - npm run test
