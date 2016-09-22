@@ -1,8 +1,21 @@
+sudo: required
 language: node_js
 node_js:
-    - "node"
-install:
-    - "curl https://install.meteor.com | /bin/sh"
-    - "meteor update"
+  - "0.10"
+
+before_install:
+  - "curl -L http://git.io/ejPSng | /bin/sh"
+
+env:
+  - CXX=g++-4.8
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+    packages:
+      - g++-4.8
+
+before_script:
+  - npm install -g meteor
 
 script: npm run test
