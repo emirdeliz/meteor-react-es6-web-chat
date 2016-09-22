@@ -7,4 +7,4 @@ install:
 before_script:
     - meteor npm update
 script:
-    - "npm run test"
+    - npm run test
