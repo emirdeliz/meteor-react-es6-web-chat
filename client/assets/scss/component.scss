@@ -1,0 +1,62 @@
+#messages-container {
+    height: 75vh;
+    overflow: auto;
+}
+
+#message-input {
+    width: 100%;
+}
+
+#message-input-container {
+    margin-top: 5px;
+}
+
+.nav {
+    padding: 0 10% 0 10%;
+}
+
+.chat-window {
+    .image {
+        margin: auto;
+        padding-right: 5px;
+        padding-left: 5px;
+    }
+
+    .relativeTime {
+        margin-left: 5px;
+    }
+}
+
+article {
+    padding: 1%;
+}
+
+.media-content {
+    margin-top: 1%;
+}
+
+figure {
+    margin-top: 1%;
+}
+
+.login {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+#errorMsg {
+    margin: 1%;
+}
+
+.authButton {
+    margin: 1%;
+}
+
+.chat-window {
+    @media screen and (min-width: 768px) {
+        margin: 2%;
+        padding: 0 10% 0 10%;
+    }
+}

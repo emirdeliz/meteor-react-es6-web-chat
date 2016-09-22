@@ -19,7 +19,10 @@
         "react/jsx-closing-bracket-location": "off",
         "react/jsx-indent-props": "off",
         "object-shorthand": "off",
-        "react/jsx-no-bind": "off"
+        "react/jsx-no-bind": "off",
+        "no-return-assign": "off",
+        "jsx-quotes": "off",
+        "comma-dangle": "off"
     },
     "plugins": [
         "react"

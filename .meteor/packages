@@ -18,7 +18,6 @@ ecmascript              # Enable ECMAScript2015+ syntax in app code
 react-meteor-data@0.2.6-beta.16
 accounts-ui
 accounts-password
-practicalmeteor:mocha
-fourseven:scss@=3.2.0
+fourseven:scss
 blaze-html-templates
-dispatch:mocha-phantomjs
+practicalmeteor:mocha
