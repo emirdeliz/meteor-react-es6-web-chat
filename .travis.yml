@@ -4,5 +4,7 @@ node_js:
     - "node"
 install:
     - "curl https://install.meteor.com | /bin/sh"
+before_script:
+    - npm install
 script:
-    - "meteor test --once --driver-package practicalmeteor:mocha"
+    - "npm run test"
