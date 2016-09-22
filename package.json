@@ -1,5 +1,5 @@
 {
-    "name": "simple-todos",
+    "name": "meteor-react-web-chat",
     "private": true,
     "scripts": {
         "start": "meteor run",
